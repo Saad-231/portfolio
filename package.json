@@ -1,0 +1,43 @@
+{
+  "name": "saad-ali-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium interactive 3D portfolio for Saad Ali — Software Engineer.",
+  "author": "Saad Ali",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.15.0",
+    "gsap": "^3.12.5",
+    "next": "15.0.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-icons": "^5.3.0",
+    "@emailjs/browser": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.0.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

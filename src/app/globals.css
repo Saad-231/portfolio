@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ────────────────────────────────────────────────────────────
+   Base layer — resets & global element defaults
+   ──────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --font-display: "Bebas Neue", sans-serif;
+    --font-body: "General Sans", "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  * {
+    @apply border-navy-600/60;
+  }
+
+  html {
+    scroll-behavior: auto; /* Lenis takes over scroll behavior */
+    background-color: #05070d;
+  }
+
+  body {
+    @apply bg-navy-900 text-bone font-body antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-bone;
+  }
+
+  /* Custom slim scrollbar to match the premium aesthetic */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05070d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #374262;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c9a24b;
+  }
+
+  /* Respect reduced-motion preferences across the whole site */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Visible keyboard focus ring, kept on-brand */
+  :focus-visible {
+    outline: 2px solid #c9a24b;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────
+   Components layer — small reusable style utilities
+   ──────────────────────────────────────────────────────────── */
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[0.7rem] tracking-widest2 uppercase text-gold;
+  }
+
+  .section-shell {
+    @apply relative mx-auto w-full max-w-[1400px] px-6 sm:px-10 lg:px-16;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-navy-500 to-transparent;
+  }
+
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full
+    border border-gold/70 bg-gold/10 px-7 py-3 font-mono text-xs uppercase tracking-widest
+    text-gold transition-all duration-500 ease-premium hover:bg-gold hover:text-navy-950;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full
+    border border-bone/20 px-7 py-3 font-mono text-xs uppercase tracking-widest
+    text-bone/80 transition-all duration-500 ease-premium hover:border-bone/60 hover:text-bone;
+  }
+
+  .card-panel {
+    @apply rounded-2xl border border-navy-600/60 bg-navy-800/60 backdrop-blur-sm;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────
+   Utilities layer
+   ──────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-stroke-gold {
+    -webkit-text-stroke: 1px rgba(201, 162, 75, 0.6);
+  }
+
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  .mask-fade-l {
+    mask-image: linear-gradient(to right, transparent 0%, black 12%);
+  }
+
+  /* Layered, warm-tinted shadow for the hero portrait — a tight contact
+     shadow plus a broad ambient falloff plus a faint gold bloom, rather
+     than a single flat drop-shadow. Used by the dressing sequence. */
+  .shadow-cinematic {
+    box-shadow:
+      0 2px 10px -2px rgba(0, 0, 0, 0.5),
+      0 30px 60px -24px rgba(0, 0, 0, 0.65),
+      0 0 90px -30px rgba(201, 162, 75, 0.3);
+  }
+}
