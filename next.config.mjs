@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   images: {
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 480, 640, 828, 1080, 1280, 1600, 1920],
   },
