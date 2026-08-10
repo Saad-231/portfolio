@@ -39,7 +39,7 @@ export const PROJECTS: ProjectItem[] = [
     image: "/images/project-novascribe.jpg",
     liveUrl: "https://novascribe-ai.vercel.app/",
     githubUrl: "https://github.com/Saad-231/backend",
-    year: "2025",
+    year: "2026",
   },
   {
     id: "proj-hubspot-clone",
@@ -49,7 +49,7 @@ export const PROJECTS: ProjectItem[] = [
     tags: ["HTML5", "CSS3", "JavaScript", "React"],
     image: "/images/project-hubspot-clone.jpg",
     liveUrl: "https://codingwithsaad.com/Saad-hubspot/",
-    year: "2024",
+    year: "2026",
   },
   {
     id: "proj-saad-portfolio",
@@ -67,7 +67,7 @@ export const PROJECTS: ProjectItem[] = [
       "Lenis",
     ],
     image: "/images/project-saad-portfolio.jpg",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Saad-231/portfolio",
     year: "2026",
   },
 ];
